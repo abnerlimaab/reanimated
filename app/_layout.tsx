@@ -50,6 +50,13 @@ export default function RootLayout() {
               headerBackTitle: "Classes",
             }}
           />
+          <Stack.Screen
+            name="interpolateWithScrollView"
+            options={{
+              headerTitle: "03 - Interpolate with ScrollView",
+              headerBackTitle: "Classes",
+            }}
+          />
         </Stack>
       </GestureHandlerRootView>
     </ThemeProvider>

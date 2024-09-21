@@ -18,6 +18,12 @@ export default function HomeScreen() {
           router.push("/panGestureHandlerBasics");
         }}
       />
+      <Button
+        title="03 - Interpolate With ScrollView"
+        onPress={() => {
+          router.push("/interpolateWithScrollView");
+        }}
+      />
     </View>
   );
 }
