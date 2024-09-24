@@ -24,6 +24,12 @@ export default function HomeScreen() {
           router.push("/interpolateWithScrollView");
         }}
       />
+      <Button
+        title="04 - Interpolate Colors"
+        onPress={() => {
+          router.push("/interpolateColors");
+        }}
+      />
     </View>
   );
 }
