@@ -64,6 +64,13 @@ export default function RootLayout() {
               headerBackTitle: "Classes",
             }}
           />
+          <Stack.Screen
+            name="pinchGestureHandlerBasics"
+            options={{
+              headerTitle: "05 - PinchGestureHandler Basics",
+              headerBackTitle: "Classes",
+            }}
+          />
         </Stack>
       </GestureHandlerRootView>
     </ThemeProvider>

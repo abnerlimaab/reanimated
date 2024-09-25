@@ -1,3 +1,4 @@
+import { CardClass } from "@/components/CardClass";
 import { useRouter } from "expo-router";
 import { Button, StyleSheet, View } from "react-native";
 
@@ -6,28 +7,38 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
-      <Button
+      <CardClass
         title="01 - Introduction"
         onPress={() => {
           router.push("/introduction");
         }}
       />
-      <Button
+      <View style={styles.spacer} />
+      <CardClass
         title="02 - PanGestureHandler Basics"
         onPress={() => {
           router.push("/panGestureHandlerBasics");
         }}
       />
-      <Button
+      <View style={styles.spacer} />
+      <CardClass
         title="03 - Interpolate With ScrollView"
         onPress={() => {
           router.push("/interpolateWithScrollView");
         }}
       />
-      <Button
+      <View style={styles.spacer} />
+      <CardClass
         title="04 - Interpolate Colors"
         onPress={() => {
           router.push("/interpolateColors");
+        }}
+      />
+      <View style={styles.spacer} />
+      <CardClass
+        title="05 - PinchGestureHandler Basics"
+        onPress={() => {
+          router.push("/pinchGestureHandlerBasics");
         }}
       />
     </View>
@@ -37,7 +48,11 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 20,
     alignItems: "center",
     justifyContent: "center",
+  },
+  spacer: {
+    height: 10,
   },
 });
