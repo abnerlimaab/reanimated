@@ -41,6 +41,13 @@ export default function HomeScreen() {
           router.push("/pinchGestureHandlerBasics");
         }}
       />
+      <View style={styles.spacer} />
+      <CardClass
+        title="06 - Animate Double Tap"
+        onPress={() => {
+          router.push("/animateDoubleTap");
+        }}
+      />
     </View>
   );
 }

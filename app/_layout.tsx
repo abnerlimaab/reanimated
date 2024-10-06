@@ -71,6 +71,13 @@ export default function RootLayout() {
               headerBackTitle: "Classes",
             }}
           />
+          <Stack.Screen
+            name="animateDoubleTap"
+            options={{
+              headerTitle: "06 - Animate Double Tap",
+              headerBackTitle: "Classes",
+            }}
+          />
         </Stack>
       </GestureHandlerRootView>
     </ThemeProvider>
