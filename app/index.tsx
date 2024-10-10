@@ -48,6 +48,13 @@ export default function HomeScreen() {
           router.push("/animateDoubleTap");
         }}
       />
+      <View style={styles.spacer} />
+      <CardClass
+        title="07 - Color Picker Animation"
+        onPress={() => {
+          router.push("/colorPickerAnimation");
+        }}
+      />
     </View>
   );
 }

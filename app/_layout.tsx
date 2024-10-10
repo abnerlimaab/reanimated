@@ -78,6 +78,13 @@ export default function RootLayout() {
               headerBackTitle: "Classes",
             }}
           />
+          <Stack.Screen
+            name="colorPickerAnimation"
+            options={{
+              headerTitle: "07 - Color Picker Animation",
+              headerBackTitle: "Classes",
+            }}
+          />
         </Stack>
       </GestureHandlerRootView>
     </ThemeProvider>
