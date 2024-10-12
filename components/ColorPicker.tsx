@@ -19,7 +19,6 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 import { DefaultStyle } from "react-native-reanimated/lib/typescript/reanimated2/hook/commonTypes";
-import { worklet } from "@/utils/worlet";
 
 function pickerAnimation({
   translateX,
@@ -124,13 +123,11 @@ const ColorPicker: React.FC<ColorPickerProps> = ({
     return style;
   }, []);
 
-  const onEnded = useCallback(
-    worklet(() => {
-      translateY.value = withSpring(0);
-      scale.value = withSpring(1);
-    }),
-    []
-  );
+  const onEnded = useCallback(() => {
+    "worklet";
+    translateY.value = withSpring(0);
+    scale.value = withSpring(1);
+  }, []);
 
   return (
     <TapGestureHandler
