@@ -55,6 +55,13 @@ export default function HomeScreen() {
           router.push("/colorPickerAnimation");
         }}
       />
+      <View style={styles.spacer} />
+      <CardClass
+        title="08 - Circular Progress Bar"
+        onPress={() => {
+          router.push("/circularProgressBar");
+        }}
+      />
     </View>
   );
 }

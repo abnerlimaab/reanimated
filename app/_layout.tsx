@@ -85,6 +85,13 @@ export default function RootLayout() {
               headerBackTitle: "Classes",
             }}
           />
+          <Stack.Screen
+            name="circularProgressBar"
+            options={{
+              headerTitle: "08 - Circular Progress Bar",
+              headerBackTitle: "Classes",
+            }}
+          />
         </Stack>
       </GestureHandlerRootView>
     </ThemeProvider>
