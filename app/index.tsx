@@ -62,6 +62,13 @@ export default function HomeScreen() {
           router.push("/circularProgressBar");
         }}
       />
+      <View style={styles.spacer} />
+      <CardClass
+        title="09 - Swipe To Delete"
+        onPress={() => {
+          router.push("swipeToDelete");
+        }}
+      />
     </View>
   );
 }

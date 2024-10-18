@@ -92,6 +92,13 @@ export default function RootLayout() {
               headerBackTitle: "Classes",
             }}
           />
+          <Stack.Screen
+            name="swipeToDelete"
+            options={{
+              headerTitle: "09 - Swipe To Delete",
+              headerBackTitle: "Classes",
+            }}
+          />
         </Stack>
       </GestureHandlerRootView>
     </ThemeProvider>
