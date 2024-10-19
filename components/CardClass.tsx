@@ -9,7 +9,7 @@ type Props = {
 export const CardClass: React.FC<Props> = ({ title, onPress }) => {
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
-      <Text style={styles.title}>{title}</Text>
+      <Text numberOfLines={1} style={styles.title}>{title}</Text>
     </TouchableOpacity>
   );
 };
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   title: {
-    fontSize: 20,
+    fontSize: 14,
     fontWeight: "bold",
     color: "#000",
   },

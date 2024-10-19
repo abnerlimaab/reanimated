@@ -11,9 +11,12 @@ import "react-native-reanimated";
 
 import { useColorScheme } from "@/hooks/useColorScheme";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { routes } from "./routes";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
+
+const headerBackTitle = "Classes";
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
@@ -35,68 +38,80 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <GestureHandlerRootView>
         <Stack>
-          <Stack.Screen name="index" options={{ headerShown: false }} />
           <Stack.Screen
-            name="introduction"
+            name={routes.index.name}
             options={{
-              headerTitle: "01 - Introduction",
-              headerBackTitle: "Classes",
+              headerTitle: routes.index.title,
             }}
           />
           <Stack.Screen
-            name="panGestureHandlerBasics"
+            name={routes.introduction.name}
             options={{
-              headerTitle: "02 - PanGestureHandler Basics",
-              headerBackTitle: "Classes",
+              headerTitle: routes.introduction.title,
+              headerBackTitle,
             }}
           />
           <Stack.Screen
-            name="interpolateWithScrollView"
+            name={routes.panGestureHandlerBasics.name}
             options={{
-              headerTitle: "03 - Interpolate with ScrollView",
-              headerBackTitle: "Classes",
+              headerTitle: routes.panGestureHandlerBasics.title,
+              headerBackTitle,
             }}
           />
           <Stack.Screen
-            name="interpolateColors"
+            name={routes.interpolateWithScrollView.name}
             options={{
-              headerTitle: "04 - Interpolate Colors",
-              headerBackTitle: "Classes",
+              headerTitle: routes.interpolateWithScrollView.title,
+              headerBackTitle,
             }}
           />
           <Stack.Screen
-            name="pinchGestureHandlerBasics"
+            name={routes.interpolateColors.name}
             options={{
-              headerTitle: "05 - PinchGestureHandler Basics",
-              headerBackTitle: "Classes",
+              headerTitle: routes.interpolateColors.title,
+              headerBackTitle,
             }}
           />
           <Stack.Screen
-            name="animateDoubleTap"
+            name={routes.pinchGestureHandlerBasics.name}
             options={{
-              headerTitle: "06 - Animate Double Tap",
-              headerBackTitle: "Classes",
+              headerTitle: routes.pinchGestureHandlerBasics.title,
+              headerBackTitle,
             }}
           />
           <Stack.Screen
-            name="colorPickerAnimation"
+            name={routes.animateDoubleTap.name}
             options={{
-              headerTitle: "07 - Color Picker Animation",
-              headerBackTitle: "Classes",
+              headerTitle: routes.animateDoubleTap.title,
+              headerBackTitle,
             }}
           />
           <Stack.Screen
-            name="circularProgressBar"
+            name={routes.colorPickerAnimation.name}
             options={{
-              headerTitle: "08 - Circular Progress Bar",
-              headerBackTitle: "Classes",
+              headerTitle: routes.colorPickerAnimation.title,
+              headerBackTitle,
             }}
           />
           <Stack.Screen
-            name="swipeToDelete"
+            name={routes.circularProgressBar.name}
             options={{
-              headerTitle: "09 - Swipe To Delete",
-              headerBackTitle: "Classes",
+              headerTitle: routes.circularProgressBar.title,
+              headerBackTitle,
+            }}
+          />
+          <Stack.Screen
+            name={routes.swipeToDelete.name}
+            options={{
+              headerTitle: routes.swipeToDelete.title,
+              headerBackTitle,
+            }}
+          />
+          <Stack.Screen
+            name={routes.rippleEffect.name}
+            options={{
+              headerTitle: routes.rippleEffect.title,
+              headerBackTitle,
             }}
           />
         </Stack>

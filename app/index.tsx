@@ -1,84 +1,37 @@
 import { CardClass } from "@/components/CardClass";
 import { useRouter } from "expo-router";
-import { Button, StyleSheet, View } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
+import { routes } from "./routes";
 
 export default function HomeScreen() {
   const router = useRouter();
 
   return (
-    <View style={styles.container}>
-      <CardClass
-        title="01 - Introduction"
-        onPress={() => {
-          router.push("/introduction");
-        }}
-      />
-      <View style={styles.spacer} />
-      <CardClass
-        title="02 - PanGestureHandler Basics"
-        onPress={() => {
-          router.push("/panGestureHandlerBasics");
-        }}
-      />
-      <View style={styles.spacer} />
-      <CardClass
-        title="03 - Interpolate With ScrollView"
-        onPress={() => {
-          router.push("/interpolateWithScrollView");
-        }}
-      />
-      <View style={styles.spacer} />
-      <CardClass
-        title="04 - Interpolate Colors"
-        onPress={() => {
-          router.push("/interpolateColors");
-        }}
-      />
-      <View style={styles.spacer} />
-      <CardClass
-        title="05 - PinchGestureHandler Basics"
-        onPress={() => {
-          router.push("/pinchGestureHandlerBasics");
-        }}
-      />
-      <View style={styles.spacer} />
-      <CardClass
-        title="06 - Animate Double Tap"
-        onPress={() => {
-          router.push("/animateDoubleTap");
-        }}
-      />
-      <View style={styles.spacer} />
-      <CardClass
-        title="07 - Color Picker Animation"
-        onPress={() => {
-          router.push("/colorPickerAnimation");
-        }}
-      />
-      <View style={styles.spacer} />
-      <CardClass
-        title="08 - Circular Progress Bar"
-        onPress={() => {
-          router.push("/circularProgressBar");
-        }}
-      />
-      <View style={styles.spacer} />
-      <CardClass
-        title="09 - Swipe To Delete"
-        onPress={() => {
-          router.push("swipeToDelete");
-        }}
-      />
-    </View>
+    <FlatList
+      style={styles.container}
+      contentContainerStyle={styles.scrollViewContent}
+      data={Object.values(routes).filter((r) => r.name !== "index")}
+      keyExtractor={(item) => item.name}
+      renderItem={({ item }) => (
+        <CardClass
+          title={item.title}
+          onPress={() => {
+            router.push(item.path);
+          }}
+        />
+      )}
+      ItemSeparatorComponent={() => <View style={styles.spacer} />}
+    />
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#fff",
+  },
+  scrollViewContent: {
     padding: 20,
-    alignItems: "center",
-    justifyContent: "center",
   },
   spacer: {
     height: 10,
