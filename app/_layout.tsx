@@ -114,6 +114,13 @@ export default function RootLayout() {
               headerBackTitle,
             }}
           />
+          <Stack.Screen
+            name={routes.perspectiveMenu.name}
+            options={{
+              headerTitle: routes.perspectiveMenu.title,
+              headerBackTitle,
+            }}
+          />
         </Stack>
       </GestureHandlerRootView>
     </ThemeProvider>

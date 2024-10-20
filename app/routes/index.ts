@@ -62,4 +62,9 @@ export const routes: Record<string, Route> = {
     title: "Ripple Effect",
     path: "/rippleEffect",
   },
+  perspectiveMenu: {
+    name: "perspectiveMenu",
+    title: "Perspective Menu",
+    path: "/perspectiveMenu",
+  }
 };
