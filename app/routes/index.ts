@@ -66,5 +66,10 @@ export const routes: Record<string, Route> = {
     name: "perspectiveMenu",
     title: "Perspective Menu",
     path: "/perspectiveMenu",
-  }
+  },
+  slidingCounter: {
+    name: "slidingCounter",
+    title: "Sliding Counter",
+    path: "/slidingCounter",
+  },
 };

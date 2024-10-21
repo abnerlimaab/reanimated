@@ -121,6 +121,13 @@ export default function RootLayout() {
               headerBackTitle,
             }}
           />
+          <Stack.Screen
+            name={routes.slidingCounter.name}
+            options={{
+              headerTitle: routes.slidingCounter.title,
+              headerBackTitle,
+            }}
+          />
         </Stack>
       </GestureHandlerRootView>
     </ThemeProvider>
