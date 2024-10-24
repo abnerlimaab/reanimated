@@ -128,6 +128,13 @@ export default function RootLayout() {
               headerBackTitle,
             }}
           />
+          <Stack.Screen
+            name={routes.clockLoader.name}
+            options={{
+              headerTitle: routes.clockLoader.title,
+              headerBackTitle,
+            }}
+          />
         </Stack>
       </GestureHandlerRootView>
     </ThemeProvider>

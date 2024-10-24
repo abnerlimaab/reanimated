@@ -72,4 +72,9 @@ export const routes: Record<string, Route> = {
     title: "Sliding Counter",
     path: "/slidingCounter",
   },
+  clockLoader: {
+    name: "clockLoader",
+    title: "Clock Loader",
+    path: "/clockLoader",
+  },
 };
